@@ -1,0 +1,50 @@
+.card {
+    box-shadow: none;
+}
+
+.card-user {
+    background: transparent;
+    padding: 2rem;
+}
+
+.card-title{
+    font-weight: 600;
+}
+
+.alterar-senha {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.atualizar-dados {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.alterar-senha .btn-round {
+    background-color: #080B53;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.atualizar-dados .btn-round {
+    background-color: #1E1E1E;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.alterar-senha .btn-round:hover {
+    background-color: #0f1499;
+    transform: translateY(-2px);
+}
+
+.atualizar-dados .btn-round:hover {
+    background-color: #686868;
+    transform: translateY(-2px);
+}
