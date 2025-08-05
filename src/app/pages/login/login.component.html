@@ -1,0 +1,27 @@
+<div class="login-container">
+  <div class="logo">
+    <img src="../../../assets/img/logo.png" alt="Site Review">
+  </div>
+  
+
+  <h2 class="subtitle">Faça seu login agora</h2>
+
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <input name="email" [(ngModel)]="email" #emailCtrl="ngModel" type="email" placeholder="Digite seu e-mail" required
+      email />
+
+    <input name="password" [(ngModel)]="password" #passwordCtrl="ngModel" type="password" placeholder="Digite sua senha"
+      required minlength="6" />
+    <div *ngIf="passwordCtrl.invalid && passwordCtrl.touched" class="error">
+    </div>
+
+    <button type="submit" class="btn-primary">
+      Login
+    </button>
+  </form>
+
+  <div class="extras">
+    <a href="#" class="forgot-password">Esqueci minha senha</a>
+    <button class="btn-secondary">Ainda não tenho conta</button>
+  </div>
+</div>

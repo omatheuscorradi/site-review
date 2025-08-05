@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-admin-layout',
@@ -8,5 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminLayoutComponent implements OnInit {
 
-  ngOnInit() { }
+  showSidebar = false;
+  private routesWithSidebar = [
+    '/busca-site',
+    '/dashboard',
+    '/sobre-nos',
+    '/perfil'
+  ];
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.router.events
+      .pipe(filter(e => e instanceof NavigationEnd))
+      .subscribe((e: NavigationEnd) => {
+        this.showSidebar = this.routesWithSidebar
+          .some(r => e.urlAfterRedirects.startsWith(r));
+      });
+  }
 }

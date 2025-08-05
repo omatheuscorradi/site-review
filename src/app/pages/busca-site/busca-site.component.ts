@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
     styleUrls: ['busca-site.component.css']
 })
 
-export class BuscaSiteComponent{}
+export class BuscaSiteComponent{
+
+    siteUrl: any;
+}
