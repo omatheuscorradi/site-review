@@ -1,10 +1,9 @@
 <div class="wrapper">
     <div *ngIf="showSidebar" class="sidebar" data-color="white" data-active-color="danger">
-        <sidebar-cmp></sidebar-cmp>
+        <sidebar-cmp *ngIf="!hideSidebar"></sidebar-cmp>
     </div>
 
-    <div class="main-panel">
-        <navbar-cmp></navbar-cmp>
+    <div class="main-panel" [class.no-sidebar]="!showSidebar">
         <div class="content">
             <router-outlet></router-outlet>
         </div>

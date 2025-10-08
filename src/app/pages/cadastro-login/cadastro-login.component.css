@@ -15,7 +15,7 @@
   margin-bottom: 24px;
 }
 
-.cadastro-container input[type="text"] {
+.cadastro-container input[type="text"], input[type="email"], input[type="password"] {
   width: 50%;
   height: 48px;
   padding: 0 16px;

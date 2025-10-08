@@ -1,0 +1,115 @@
+/* Estilos personalizados para o sidebar */
+
+.sidebar-wrapper {
+  height: 100vh;
+  background-color: #080B53;
+  padding: 0;
+}
+
+/* Logo maior */
+.logo {
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.logo-image-large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image-large img {
+  width: 120px;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Divisor após a logo */
+.logo-divider {
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 16px 20px 16px;
+}
+
+/* Menu alinhado à esquerda */
+.nav {
+  margin-top: 0;
+  padding: 0 16px;
+}
+
+.nav li {
+  margin-bottom: 8px;
+}
+
+.nav li > a {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav li > a:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo para item ativo/selecionado */
+.nav li.active > a {
+  background-color: #ffffff !important;
+  color: #080B53 !important;
+  font-weight: 600;
+}
+
+.nav li.active > a i,
+.nav li.active > a p {
+  color: #080B53 !important;
+}
+
+.nav li > a i {
+  margin-right: 12px;
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+.nav li > a p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Estilo específico para o botão de busca */
+.btn-busca {
+  color: #ffffff !important;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-busca:hover {
+  color: #ffffff !important;
+}
+
+.btn-busca.active {
+  background-color: #ffffff !important;
+}
+
+/* Remove a seta (pseudo-elemento) do item ativo no menu */
+.nav li.active > a::after,
+.nav li.active > a::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Força o tamanho da logo */
+.sidebar-wrapper .logo img {
+  width: 160px !important;  /* ajuste o valor conforme desejar */
+  height: auto !important;
+  max-width: none !important;
+  display: block;
+  margin: 0 auto;
+}
+
