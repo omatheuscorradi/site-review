@@ -1,0 +1,32 @@
+.wrapper {
+  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.main-panel {
+  min-height: 100vh;
+  
+  .content {
+    padding: 30px;
+    padding-bottom: 0;
+    margin-top: 0 !important;
+    margin-bottom: 0;
+    min-height: 100vh !important;
+    height: 100%;
+  }
+}
+
+.main-panel.no-sidebar {
+  width: 100%;
+  margin-left: 0;
+  background-color: transparent;
+
+  .content {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    height: 100%;
+  }
+}
+

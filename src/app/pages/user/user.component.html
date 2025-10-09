@@ -32,12 +32,40 @@
           </div>
           
           <div class="row">
-            <div class="col-12 atualizar-dados">
+            <div class="col-12 botoes-acao">
+              <button type="button" class="excluir-conta btn-round" (click)="openDeleteModal()">Excluir Conta</button>
               <button type="submit" class="atualizar-dados btn-round">Alterar Dados</button>
             </div>
           </div>
         </form>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Confirmação de Exclusão -->
+<div class="modal-overlay" *ngIf="showDeleteModal" (click)="closeDeleteModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h3>Excluir Conta</h3>
+      <button class="close-btn" (click)="closeDeleteModal()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>Esta ação é irreversível. Para confirmar a exclusão da sua conta, digite <strong>"excluir"</strong> no campo abaixo:</p>
+      <input 
+        type="text" 
+        class="confirm-input" 
+        [(ngModel)]="confirmText" 
+        placeholder="Digite 'excluir'" 
+        (keyup.enter)="confirmDelete()"
+      />
+      <div class="error-message" *ngIf="showError">
+        O texto não corresponde. Por favor, digite "excluir".
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-cancelar" (click)="closeDeleteModal()">Cancelar</button>
+      <button class="btn-confirmar" (click)="confirmDelete()">Confirmar Exclusão</button>
     </div>
   </div>
 </div>
